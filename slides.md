@@ -186,13 +186,17 @@ Cliburn Chan and Jeremy Gresham
 - If exists, can you identify the exact data used?
 - Can you link the laboratory and clinical data?
 
-- Practices and tools for data
-  - Keep raw data
-  - Hash the data (e.g. MD5 or SHA-1) to check for corruption
-  - Annotate data using standard vocabularies
-  - Make a copy of all data - ideally in a public repository
-    - NCI: Genomic Data Commons
-    - NIAID: ImmPort
+---
+
+
+####Practices and tools for data
+
+- Keep raw data
+- Hash the data (e.g. MD5 or SHA-1) to check for corruption
+- Annotate data using standard vocabularies
+- Make a copy of all data - ideally in a public repository
+  - NCI: Genomic Data Commons
+  - NIAID: ImmPort
 
 - Example: [ReFlow](https://test.reflowproject.org)
 
@@ -205,13 +209,15 @@ Cliburn Chan and Jeremy Gresham
 - You used proprietary software A from Vendor X to preprocess the ELISA data (Vendor X went bankrupt 2 years ago)
 - You ran the analysis with R 3.0.4 with packages X (version 1.23), Y (version 2.34) and Z (version 3.45)
 
-- Practices and tools for analytic environment
-  - Prefer open-source tools
-  - Use reproducible **virtual machines** or **containers** environments to run your analysis
+#### Practices and tools for analytic environment
+
+- Prefer open-source tools
+- Use reproducible **virtual machines** or **containers** environments to run your analysis
 
 - Example: Using Docker (Jeremy's talk)
 
 ---
+
 
 #### Can we find and use the analysis scripts?
 
@@ -221,15 +227,38 @@ Cliburn Chan and Jeremy Gresham
 - Are you sure that is the exact version of the script used?
 - Can you still run your script (see previous slide)
 
-- Practices and tools for analytic environment
-  - Don't do the final analysis using a GUI
-  - Use version control for scripts (e.g. `git`)
-  - Commit early and often
-  - Use informative log messages when commuting
+---
 
-- Example: Using [BitBucket](https://bitbucket.org/cliburn/reproducible-analysis)
+
+#### Practices and tools for analytic scripts
+
+- Don't do the final analysis using a GUI
+- Use version control for scripts (e.g. `hg`, `git`)
+- Use a version control service (e.g. `GitHub`, `Bitbucket`')
+- Commit early and often
+- Use informative log messages when commuting
+
+- Example: Using [GitHub](https://github.com/cliburn/reproducible-analysis-2017
 
 ----
 
 
 #### Can we replicate the report/poster/paper?
+
+- Can you replicate the report/poster/paper when
+  - you need to modify some data
+  - you suspect that is a bug in your script
+  - you want to switch one pipeline stage for another
+- If your report/poster/paper was done by copy/paste from Excel or Prism etc, you are most likely in for a world of pain
+
+---
+
+
+#### Practices and tools for document generation
+
+- Have a script to generate all results, tables and statistical plots
+- If feasible, generate the entire document programmatically
+using `literate programming`
+  - Literate programming combines documentation with code-generated artifacts (e.g. p-values, tables, figures)
+
+- Example: Literate programming with `beaker`
