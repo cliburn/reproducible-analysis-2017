@@ -1,6 +1,6 @@
-# Tools for Reproducible Analysis with Large-scale Data
+## Tools for Reproducible Analysis with Large-scale Data
 
-### Can we replicate the results we published last year?
+### Can we replicate results we published last year?
 
 Cliburn Chan and Jeremy Gresham
 
