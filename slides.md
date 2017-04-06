@@ -43,7 +43,7 @@ Cliburn Chan
 
 - Research is becoming more complex <!-- .element: class="fragment" data-fragment-index="1" -->
 - Reproducible research: big picture <!-- .element: class="fragment" data-fragment-index="2" -->
-- <!-- .element: class="fragment" data-fragment-index="3" --> Practices and tools for reproducible <font color=yellow>analysis<yellow>
+- <!-- .element: class="fragment" data-fragment-index="3" --> Practices and tools for reproducible <font color=yellow>analysis</font>
 
 ---
 
@@ -93,7 +93,6 @@ Cliburn Chan
 
 ----
 
-
 ### Complex analysis pipelines
 
 - Manual analysis is either already impossible or moving there rapidly
@@ -103,7 +102,6 @@ Cliburn Chan
   - Cytometry: CyTOF and BD Symphony up to 50 parameters
   - Multiplexed ELISA: 10s - 100s of soluble factors
   - IHC: Up to 10 distinct antibodies
-- Need for script-driven processing and analysis
 
 ---
 
@@ -122,7 +120,7 @@ Cliburn Chan
 - Experimental design <!-- .element: class="fragment" data-fragment-index="1" -->
 - Data generation <!-- .element: class="fragment" data-fragment-index="2" -->
 - Data stewardship <!-- .element: class="fragment" data-fragment-index="3" -->
-- <!-- .element: class="fragment" data-fragment-index="4" --> <font color=yellow>Data analysis<font><
+- <!-- .element: class="fragment" data-fragment-index="4" --> <font color=yellow>Data analysis</font>
 
 ---
 
@@ -142,7 +140,6 @@ Cliburn Chan
 - What is the study design?
 - Is there sufficient power?
 - Will the samples be representative?
-- <font color=yellow>Mock workflow often useful</font>
 
 ----
 
@@ -153,7 +150,6 @@ Cliburn Chan
 - Sample labeling
 - Sample tracking
 - Use of LIMS
-- <font color=yellow>Mock workflow often useful</font>
 
 ----
 
@@ -168,7 +164,6 @@ Cliburn Chan
   - Double-entry book-keeping
   - Review by supervisor
 - Are data modifications tracked/logged?
-- <font color=yellow>Mock workflow often useful</font>
 
 ---
 
@@ -295,7 +290,7 @@ Example: Using [GitHub](https://github.com/cliburn/reproducible-analysis-2017)
   - <!-- .element: class="fragment" data-fragment-index="1" -->you need to modify some data
   - <!-- .element: class="fragment" data-fragment-index="2" -->you need to fix a bug in your script
   - <!-- .element: class="fragment" data-fragment-index="3" -->you want to try an alternative algorithm
-- <!-- .element: class="fragment" data-fragment-index="4" --> <font color=yellow>If your report/poster/paper was done by copy/paste from Excel or Prism etc, you are most likely in for a world of pain</font>
+- <!-- .element: class="fragment" data-fragment-index="4" --> <font color=yellow>Regeneration is hard with Excel/Prism/Word workflows</font>
 
 ----
 
@@ -317,7 +312,7 @@ Example: Literate programming with [notebooks](http://localhost:8888/notebooks/L
 - Use version control <!-- .element: class="fragment" data-fragment-index="3" -->
 - Run scripts in reusable containers <!-- .element: class="fragment" data-fragment-index="4" -->
 - Program in a literate style <!-- .element: class="fragment" data-fragment-index="5" -->
-- <!-- .element: class="fragment" data-fragment-index="6" --> We offer [comprehensive free training sponsored by NIH BD2K grant](https://biostat.duke.edu/education/high-throughput-sequencing-course)
+- <!-- .element: class="fragment" data-fragment-index="6" --> Shameless plug: We offer [comprehensive free training in reproducible genomics analysis sponsored by NIH BD2K grant](https://biostat.duke.edu/education/high-throughput-sequencing-course)
 
 
 ---
