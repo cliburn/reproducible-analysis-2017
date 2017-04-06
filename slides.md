@@ -10,6 +10,10 @@ revealOptions:
 
 ## Practices and Tools for Reproducible Analysis
 
+Cliburn Chan
+
+---
+
 ### Reproducing analysis can be hard
 
 > "Our hard disk crashed."
@@ -23,7 +27,7 @@ revealOptions:
 > "The dog ate the code."
 
 
-Cliburn Chan
+
 
 ---
 
@@ -35,15 +39,15 @@ Cliburn Chan
 
 ---
 
-## The problem ... and inklings of a solution
+## Outline of talk
 
 - Research is becoming more complex <!-- .element: class="fragment" data-fragment-index="1" -->
-- Pieces of reproducible research <!-- .element: class="fragment" data-fragment-index="2" -->
-- Practices and tools for reproducible analysis <!-- .element: class="fragment" data-fragment-index="3" -->
+- Reproducible research: big picture <!-- .element: class="fragment" data-fragment-index="2" -->
+- <!-- .element: class="fragment" data-fragment-index="3" --> Practices and tools for reproducible <font color=yellow>analysis<yellow>
 
 ---
 
-## Research is becoming more complex
+## Research is complex
 
 |  |  |
 | ------:| -----|
@@ -81,11 +85,11 @@ Cliburn Chan
 
 ### Multi-center studies
 
-- Often necessary due to get adequate power
+- May be necessary to get adequate power
   - Sample processing
   - Sample shipping
-  - Need for reconciliation
-  - Common data standards and annotation
+  - Reconciliation
+  - Data standards and annotation
 
 ----
 
@@ -113,12 +117,12 @@ Cliburn Chan
 
 ---
 
-## Pieces of Reproducible Research
+## Reproducible Pieces
 
 - Experimental design <!-- .element: class="fragment" data-fragment-index="1" -->
 - Data generation <!-- .element: class="fragment" data-fragment-index="2" -->
 - Data stewardship <!-- .element: class="fragment" data-fragment-index="3" -->
-- Data analysis <!-- .element: class="fragment" data-fragment-index="4" -->
+- <!-- .element: class="fragment" data-fragment-index="4" --> <font color=yellow>Data analysis<font><
 
 ---
 
@@ -130,7 +134,7 @@ Cliburn Chan
 
 ----
 
-### Statistical analysis plan
+### Statistical analysis
 
 - What is the study objective?
 - What is the outcome?
@@ -138,35 +142,33 @@ Cliburn Chan
 - What is the study design?
 - Is there sufficient power?
 - Will the samples be representative?
-- <font color=blue>Mock workflow often useful</font>
+- <font color=yellow>Mock workflow often useful</font>
 
 ----
 
-### Sample management plan
+### Sample management
 
 - Shipping SOP
 - Transfer and reconciliation SOP
 - Sample labeling
 - Sample tracking
 - Use of LIMS
-- <font color=blue>Mock workflow often useful</font>
+- <font color=yellow>Mock workflow often useful</font>
 
 ----
 
-### Data management plan
+### Data management
 
 - Where will raw data be uploaded/stored?
 - What variables will be recorded?
 - What data standards will be used for annotation?
 - Where will it be recorded?
-  - Often REDCap for clinical data
-  - Often the Wild West for laboratory data summaries
 - How are data entry errors handled?
   - Automated validation checks
   - Double-entry book-keeping
   - Review by supervisor
 - Are data modifications tracked/logged?
-- <font color=blue>Mock workflow often useful</font>
+- <font color=yellow>Mock workflow often useful</font>
 
 ---
 
@@ -181,12 +183,12 @@ Cliburn Chan
 
 ### Data stewardship
 
-- FAIR principles
+- FAIR principles to facilitate knowledge discovery
   - Findable
   - Accessible
   - Inter-operable
   - Reusable
-- See [FAIR guidelines](https://www.force11.org/group/fairgroup/fairprinciples)
+- See [guidelines](https://www.force11.org/group/fairgroup/fairprinciples)
 
 
 ---
@@ -230,11 +232,12 @@ Cliburn Chan
 
 ----
 
-### Practices and tools for data
+### Practices and tools (Data)
 
 - Keep raw data
 - Create hash data signatures
 - Use standard vocabularies for annotation
+- Use standard exchangeable formats
 - Make a copy of all data
 - Deposit in public repository
   - Genomic Data Commons
@@ -246,16 +249,16 @@ Example: [ReFlow](https://test.reflowproject.org)
 
 ### Can you recreate the environment?
 
-- You used Windows XP
-  - your lab is now a Mac-only shop
-- You used proprietary software A from Vendor X  
-  - Vendor X went bankrupt 2 years ago
-- You ran the analysis with R 3.1.2 with packages X (version A), Y (version B) and Z (version C))
-  - Versions have been updated and are not compatible with R
+- You used Windows XP <!-- .element: class="fragment" data-fragment-index="1" -->
+  - Your lab is now a Mac-only shop <!-- .element: class="fragment" data-fragment-index="2" -->
+- You used proprietary software A from Vendor X <!-- .element: class="fragment" data-fragment-index="3" -->
+  - Vendor X went bankrupt 2 years ago <!-- .element: class="fragment" data-fragment-index="4" -->
+- You ran the analysis with R 3.1.2 with packages X (version A), Y (version B) and Z (version C)) <!-- .element: class="fragment" data-fragment-index="5" -->
+  - Versions have been updated and are not compatible with R 3.1.2 <!-- .element: class="fragment" data-fragment-index="6" -->
 
 ----
 
-### Practices and tools for analytic environment
+### Practices and tools (Environment)
 
 - Prefer open-source tools
 - Use reproducible environments
@@ -264,7 +267,7 @@ Example: Using Docker (Jeremy's talk)
 
 ----
 
-### Can we find and use the analysis scripts?
+### Can you use your analysis code?
 
 -  Using a GUI (e.g. Excel), you needs perfect memory
   - Perfect memory does not exist
@@ -274,7 +277,7 @@ Example: Using Docker (Jeremy's talk)
 
 ----
 
-### Practices and tools for analytic scripts
+### Practices and tools (Code)
 
 - Don't do the final analysis using a GUI
 - Use version control for scripts (e.g. `hg`, `git`)
@@ -286,24 +289,35 @@ Example: Using [GitHub](https://github.com/cliburn/reproducible-analysis-2017)
 
 ----
 
-### Can you replicate the report/poster/paper?
+### Can you re-generate the report/poster/paper?
 
 - Can you replicate the report/poster/paper when
-  - you need to modify some data
-  - you suspect that is a bug in your script
-  - you want to switch one pipeline stage for another
-- <font color=red>If your report/poster/paper was done by copy/paste from Excel or Prism etc, you are most likely in for a world of pain</font>
+  - <!-- .element: class="fragment" data-fragment-index="1" -->you need to modify some data
+  - <!-- .element: class="fragment" data-fragment-index="2" -->you need to fix a bug in your script
+  - <!-- .element: class="fragment" data-fragment-index="3" -->you want to try an alternative algorithm
+- <!-- .element: class="fragment" data-fragment-index="4" --> <font color=yellow>If your report/poster/paper was done by copy/paste from Excel or Prism etc, you are most likely in for a world of pain</font>
 
 ----
 
-### Practices and tools for document generation
+### Practices and tools (Documents)
 
 - Use a script for calculated values, tables and plots
 - Practice literate programming
   - `knitr`
   - "Notebooks" - Jupyter, nteract, beaker, RStudio
 
-Example: Literate programming with `beaker`
+Example: Literate programming with [notebooks](http://localhost:8888/notebooks/Literate_Programming_Example.ipynb)
+
+---
+
+# Summary
+
+- Upload data to public repository <!-- .element: class="fragment" data-fragment-index="1" -->
+- Prefer scripting to GUI applications <!-- .element: class="fragment" data-fragment-index="2" -->
+- Use version control <!-- .element: class="fragment" data-fragment-index="3" -->
+- Run scripts in reusable containers <!-- .element: class="fragment" data-fragment-index="4" -->
+- Program in a literate style <!-- .element: class="fragment" data-fragment-index="5" -->
+- <!-- .element: class="fragment" data-fragment-index="6" --> We offer [comprehensive free training sponsored by NIH BD2K grant](https://biostat.duke.edu/education/high-throughput-sequencing-course)
 
 
 ---
